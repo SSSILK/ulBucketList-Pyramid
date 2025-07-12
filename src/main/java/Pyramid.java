@@ -28,6 +28,15 @@ public class Pyramid {
      * @return a string representation of the pyramid.
      */
     public String returnPyramid(int n){
-        return "";
+      StringBuilder pyramid = new StringBuilder();
+
+        for (int i = 1; i <= n; i++) {           // outer loop for each row
+            for (int j = 1; j <= i; j++) {      // inner loop for asterisks per row
+                pyramid.append("*");
+            }
+            pyramid.append("\n");                // newline after each row
+        }
+
+        return pyramid.toString();
     }
 }
